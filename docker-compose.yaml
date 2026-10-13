@@ -1,0 +1,61 @@
+services:
+  bc-redis:
+    image: 'redis:7-alpine'
+    restart: unless-stopped
+    volumes:
+      - 'redis_data:/data'
+
+  bc-gotenberg:
+    image: 'gotenberg/gotenberg:7'
+    restart: unless-stopped
+
+  bc-server:
+    build:
+      context: .
+      dockerfile: packages/server/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - bc-redis
+      - bc-gotenberg
+    environment:
+      - 'APP_JWT_SECRET=${APP_JWT_SECRET}'
+      - 'BASE_URL=${BASE_URL}'
+      - 'DB_HOST=${DB_HOST}'
+      - 'DB_USER=${DB_USER:-root}'
+      - 'DB_PASSWORD=${DB_PASSWORD}'
+      - 'DB_CHARSET=${DB_CHARSET:-utf8}'
+      - 'SYSTEM_DB_NAME=${SYSTEM_DB_NAME:-bigcapital_system}'
+      - 'TENANT_DB_NAME_PERFIX=${TENANT_DB_NAME_PERFIX:-bigcapital_tenant_}'
+      - REDIS_HOST=bc-redis
+      - REDIS_PORT=6379
+      - QUEUE_HOST=bc-redis
+      - QUEUE_PORT=6379
+      - 'GOTENBERG_URL=http://bc-gotenberg:3000'
+      - 'GOTENBERG_DOCS_URL=http://bc-server:3000/public/'
+      - 'SIGNUP_DISABLED=${SIGNUP_DISABLED:-false}'
+      - 'SIGNUP_EMAIL_CONFIRMATION=${SIGNUP_EMAIL_CONFIRMATION:-false}'
+      - 'MAIL_HOST=${MAIL_HOST}'
+      - 'MAIL_PORT=${MAIL_PORT:-587}'
+      - 'MAIL_SECURE=${MAIL_SECURE:-false}'
+      - 'MAIL_USERNAME=${MAIL_USERNAME}'
+      - 'MAIL_PASSWORD=${MAIL_PASSWORD}'
+      - 'MAIL_FROM_NAME=${MAIL_FROM_NAME:-WorkflowAutomate}'
+      - 'MAIL_FROM_ADDRESS=${MAIL_FROM_ADDRESS}'
+      - 'S3_REGION=${S3_REGION:-us-east-1}'
+      - 'S3_ACCESS_KEY_ID=${S3_ACCESS_KEY_ID}'
+      - 'S3_SECRET_ACCESS_KEY=${S3_SECRET_ACCESS_KEY}'
+      - 'S3_ENDPOINT=${S3_ENDPOINT}'
+      - 'S3_BUCKET=${S3_BUCKET}'
+      - S3_FORCE_PATH_STYLE=true
+      - CLICKHOUSE_ENABLED=false
+
+  webapp:
+    build:
+      context: .
+      dockerfile: packages/webapp/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - bc-server
+
+volumes:
+  redis_data: null
