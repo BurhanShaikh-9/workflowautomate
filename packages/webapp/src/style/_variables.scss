@@ -347,11 +347,11 @@ body.bp4-dark  {
   --color-orange-200: #935610;
   --color-orange-100: #77450d;
 
-  --color-dark-gray5: #404854;
-  --color-dark-gray4: #383e47;
-  --color-dark-gray3: #2f343c;
-  --color-dark-gray2: #252a31;
-  --color-dark-gray1: #1c2127;
+  --color-dark-gray5: #33332c;
+  --color-dark-gray4: #25251f;
+  --color-dark-gray3: #1a1a15;
+  --color-dark-gray2: #141410;
+  --color-dark-gray1: #0b0b08;
 
   --color-light-gray1: #d3d8de;
   --color-light-gray2: #dce0e5;
@@ -461,7 +461,7 @@ body.bp4-dark  {
 
   // Sidebar
   --color-sidebar-toggle: rgba(255, 255, 255, 0.5);
-  --color-sidebar-background: var(--color-dark-gray3);
+  --color-sidebar-background: var(--color-dark-gray1);
   --color-sidebar-text: var(--color-white);
   --color-sidebar-scrollbars-background: rgba(255, 255, 255, 0.25);
 

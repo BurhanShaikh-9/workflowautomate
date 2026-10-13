@@ -1,7 +1,5 @@
 import classNames from 'classnames';
 import React from 'react';
-import { Icon } from '@/components';
-import { useIsDarkMode } from '@/hooks/useDarkMode';
 
 import '@/style/components/BigcapitalLoading.scss';
 
@@ -10,27 +8,21 @@ interface BigcapitalLoadingProps {
 }
 
 /**
- * Bigcapital logo loading.
+ * WorkflowAutomate logo loading.
  */
 export default function BigcapitalLoading({
   className,
 }: BigcapitalLoadingProps) {
-  const isDarkmode = useIsDarkMode();
-
   return (
     <div className={classNames('bigcapital-loading', className)}>
       <div className="center">
-        {isDarkmode ? (
-          <Icon
-            icon="bigcapital-alt"
-            height={37}
-            width={228}
-            color="#fff"
-            className="bigcapital-logo"
-          />
-        ) : (
-          <Icon icon="bigcapital" height={37} width={228} />
-        )}
+        <img
+          src="/workflowautomate-logo.png"
+          alt="WorkflowAutomate"
+          height={42}
+          style={{ objectFit: 'contain', maxWidth: '280px' }}
+          className="bigcapital-logo"
+        />
       </div>
     </div>
   );

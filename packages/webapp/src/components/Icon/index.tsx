@@ -83,6 +83,34 @@ export class Icon extends React.Component<IconProps> {
     const computedHeight = height || iconSize;
     const computedWidth = width || iconSize;
 
+    if (icon === 'bigcapital' || icon === 'bigcapital-alt') {
+      return (
+        <img
+          src="/workflowautomate-logo.png"
+          alt="WorkflowAutomate"
+          width={computedWidth}
+          height={computedHeight}
+          className={classNames(Classes.ICON, className)}
+          style={{ objectFit: 'contain', ...this.props.style }}
+          title={htmlTitle}
+        />
+      );
+    }
+
+    if (icon === 'mini-bigcapital') {
+      return (
+        <img
+          src="/workflowautomate-icon.png"
+          alt="WorkflowAutomate"
+          width={computedWidth}
+          height={computedHeight}
+          className={classNames(Classes.ICON, className)}
+          style={{ objectFit: 'contain', borderRadius: '4px', ...this.props.style }}
+          title={htmlTitle}
+        />
+      );
+    }
+
     return React.createElement(
       tagName,
       {
