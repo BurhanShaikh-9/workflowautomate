@@ -16,4 +16,34 @@
       } 
     }
   }
+
+  .bp4-dark & {
+    background: #141410;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 20px 48px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+
+    &-header {
+      background: #181814;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+      .bp4-heading {
+        color: #ffffff;
+        font-weight: 600;
+      }
+
+      .bp4-button.bp4-minimal {
+        color: rgba(255, 255, 255, 0.6);
+
+        &:hover {
+          color: #ffffff;
+          background: rgba(255, 255, 255, 0.08);
+        }
+      }
+    }
+
+    &-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      background: #181814;
+    }
+  }
 }

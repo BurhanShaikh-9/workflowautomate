@@ -92,15 +92,55 @@ $dashboard-views-bar-height: 44px;
         .#{$ns}-icon {
           color: #1552c8;
         }
+
+        .bp4-dark & {
+          color: rgba(255, 255, 255, 0.85);
+
+          &:hover,
+          &:focus {
+            background-color: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+          }
+
+          .#{$ns}-icon {
+            color: rgba(255, 255, 255, 0.7);
+          }
+        }
       }
 
       .bp4-navbar-divider {
         margin: 0 8px;
+
+        .bp4-dark & {
+          border-left-color: rgba(255, 255, 255, 0.1);
+        }
       }
 
       .form-group-quick-new-downDrop {
         .bp4-popover-target .bp4-button {
           color: #1552c8;
+        }
+
+        .bp4-dark & {
+          .bp4-popover-target .bp4-button {
+            color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 6px;
+            padding: 5px 14px;
+            font-weight: 500;
+            transition: all 0.15s ease;
+
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.14);
+              border-color: rgba(255, 255, 255, 0.22);
+              color: #ffffff;
+            }
+
+            .#{$ns}-icon {
+              color: #ffffff;
+            }
+          }
         }
 
         .bp4-button::after {
@@ -282,6 +322,16 @@ $dashboard-views-bar-height: 44px;
           &:focus {
             color: #223fc5;
             background: rgba(34, 63, 197, 0.08);
+          }
+
+          .bp4-dark & {
+            color: #60a5fa;
+
+            &:hover,
+            &:focus {
+              color: #93c5fd;
+              background: rgba(96, 165, 250, 0.12);
+            }
           }
         }
 

@@ -1,38 +1,100 @@
 .financial-reports {
-  padding: 20px 32px;
+  padding: 24px 32px;
 
   .section-title {
     font-weight: 600;
-    margin-bottom: 1.4rem;
-    font-size: 18px;
+    margin-bottom: 1.1rem;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     color: var(--color-report-section-title-text);
-    margin-top: 10px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      margin-top: 4px;
+    }
   }
 
   &__list {
     display: flex;
     flex-flow: wrap;
-    margin-left: -20px;
+    gap: 16px;
+    margin-left: 0;
   }
+
   &__item {
-    width: 250px;
+    width: 260px;
     min-height: 140px;
-    margin-bottom: 16px;
-    margin-left: 16px;
+    margin-bottom: 0;
+    margin-left: 0;
     border: 1px solid var(--color-report-item-border);
-    border-top: 3px solid var(--color-report-item-top-border);
+    border-radius: 12px;
     background: var(--color-report-item-background);
-    padding: 18px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.6);
+
+      .bp4-dark & {
+        border-color: rgba(255, 255, 255, 0.2);
+        background: #171712;
+      }
+
+      .title,
+      .title a {
+        color: #ffffff;
+      }
+    }
+
+    .bp4-dark & {
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #12120e;
+    }
 
     .title {
-      font-size: 16px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.15s ease;
+
+      &,
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .bp4-dark & {
+        color: #f4f4f5;
+
+        &:hover,
+        a:hover {
+          color: #ffffff;
+          text-decoration: none;
+        }
+      }
     }
 
     .desc {
       color: var(--color-report-item-text);
       line-height: 1.55;
+      font-size: 13px;
       margin-top: 8px;
       margin-bottom: 0;
+
+      .bp4-dark & {
+        color: #a1a1aa;
+      }
     }
   }
 }

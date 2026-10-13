@@ -347,22 +347,22 @@ body.bp4-dark  {
   --color-orange-200: #935610;
   --color-orange-100: #77450d;
 
-  --color-dark-gray5: #33332c;
-  --color-dark-gray4: #25251f;
-  --color-dark-gray3: #1a1a15;
-  --color-dark-gray2: #141410;
+  --color-dark-gray5: #2d2d26;
+  --color-dark-gray4: #22221c;
+  --color-dark-gray3: #181814;
+  --color-dark-gray2: #12120e;
   --color-dark-gray1: #0b0b08;
 
-  --color-light-gray1: #d3d8de;
-  --color-light-gray2: #dce0e5;
-  --color-light-gray3: #e5e8eb;
-  --color-light-gray4: #edeff2;
-  --color-light-gray5: #f6f7f9;
+  --color-light-gray1: #ffffff;
+  --color-light-gray2: #f4f4f5;
+  --color-light-gray3: #e4e4e7;
+  --color-light-gray4: #a1a1aa;
+  --color-light-gray5: #71717a;
 
   --color-white: #fff;
   --color-black: #000;
 
-  --color-muted-text: #abb3bf;
+  --color-muted-text: #a1a1aa;
 
   // Background
   --color-ui-background-primary: var(--color-base-sand-0);
@@ -412,66 +412,61 @@ body.bp4-dark  {
   --color-dashboard-insider-background: var(--color-dark-gray1);
   --color-dashboard-topbar-background: var(--color-dark-gray1);
   --color-dashboard-fallback-loading-background: var(--color-dark-gray1);
-  --color-dashboard-topbar-border-color: transparent;
+  --color-dashboard-topbar-border-color: rgba(255, 255, 255, 0.07);
   --color-dashboard-datatable-background: var(--color-dark-gray1);
-  --color-dashboard-datatable-border: var(--color-dark-gray3);
+  --color-dashboard-datatable-border: rgba(255, 255, 255, 0.08);
 
   // Dashboard error boundary.
-  --color-dashboard-error-boundary-title-text: #2c3a5d;
-  --color-dashboard-error-boundary-description-text: #1f3255;
-  --color-dashboard-error-boundary-title-text: rgba(255, 255, 255, 0.75);
+  --color-dashboard-error-boundary-title-text: rgba(255, 255, 255, 0.85);
   --color-dashboard-error-boundary-description-text: rgba(255, 255, 255, 0.6);
-  --color-dashboard-error-boundary-logo: #a1afca;
   --color-dashboard-error-boundary-logo: rgba(255, 255, 255, 0.45);
 
   // Dashboard - Navbar.
   --color-dashboard-navbar-background: var(--color-dark-gray1);
-  --color-dashboard-navbar-item-text: var(--color-light-gray3);
-  --color-dashboard-navbar-item-hover-text: var(--color-light-gray5);
-  --color-dashboard-navbar-item-hover-background: var(--color-dark-gray3);
-  --color-dashboard-navbar-item-active-text: var(--color-light-gray5);
-  --color-dashboard-navbar-item-active-background: var(--color-dark-gray3);
-  --color-dashboard-navbar-item-icon: #32304a;
+  --color-dashboard-navbar-item-text: rgba(255, 255, 255, 0.75);
+  --color-dashboard-navbar-item-hover-text: #ffffff;
+  --color-dashboard-navbar-item-hover-background: rgba(255, 255, 255, 0.07);
+  --color-dashboard-navbar-item-active-text: #ffffff;
+  --color-dashboard-navbar-item-active-background: rgba(255, 255, 255, 0.12);
+  --color-dashboard-navbar-item-icon: rgba(255, 255, 255, 0.65);
   --color-dashboard-topbar-title-text: var(--color-white);
 
   // Dashboard - Actionsbar.
-  --color-dashboard-actionsbar-border: var(--color-dark-gray4);
-  --color-dashboard-actionsbar-divider: rgba(255, 255, 255, 0.2);
+  --color-dashboard-actionsbar-border: rgba(255, 255, 255, 0.07);
+  --color-dashboard-actionsbar-divider: rgba(255, 255, 255, 0.12);
 
   // Datatable
-  --color-datatable-head-background: var(--color-dark-gray3);
-  --color-datatable-head-text: var(--color-white);
-  --color-datatable-head-border: var(--color-dark-gray4);
-  --color-datatable-cell-hover-background: var(--color-dark-gray3);
-  --color-datatable-cell-border: var(--color-dark-gray4);
-  --color-datatable-cell-focus-border: rgba(0, 82, 204, 0.7);
+  --color-datatable-head-background: #12120e;
+  --color-datatable-head-text: rgba(255, 255, 255, 0.75);
+  --color-datatable-head-border: rgba(255, 255, 255, 0.08);
+  --color-datatable-cell-hover-background: rgba(255, 255, 255, 0.04);
+  --color-datatable-cell-border: rgba(255, 255, 255, 0.06);
   --color-datatable-cell-focus-border: var(--color-primary);
-  --color-datatable-no-results-text: #777;
-  --color-datatable-no-results-text: rgba(255, 255, 255, 0.5);
+  --color-datatable-no-results-text: rgba(255, 255, 255, 0.45);
   --color-datatable-caret: rgba(255, 255, 255, 0.25);
-  --color-datatable-caret-hover: rgba(255, 255, 255, 0.25);
+  --color-datatable-caret-hover: rgba(255, 255, 255, 0.5);
   --color-datatable-checkbox-border: rgba(255, 255, 255, 0.3);
 
   // Datatable - Empty status
-  --color-datatable-empty-status-title: var(--color-light-gray4);
-  --color-datatable-empty-status-description: var(--color-light-gray5);
+  --color-datatable-empty-status-title: var(--color-light-gray2);
+  --color-datatable-empty-status-description: var(--color-light-gray4);
 
-  --color-dashboard-card-background: var(--color-dark-gray1);
-  --color-dashboard-card-border: var(--color-dark-gray3);
+  --color-dashboard-card-background: var(--color-dark-gray2);
+  --color-dashboard-card-border: rgba(255, 255, 255, 0.08);
 
   // Sidebar
-  --color-sidebar-toggle: rgba(255, 255, 255, 0.5);
+  --color-sidebar-toggle: rgba(255, 255, 255, 0.6);
   --color-sidebar-background: var(--color-dark-gray1);
   --color-sidebar-text: var(--color-white);
-  --color-sidebar-scrollbars-background: rgba(255, 255, 255, 0.25);
+  --color-sidebar-scrollbars-background: rgba(255, 255, 255, 0.2);
 
   // Sidebar - Items  
-  --color-sidebar-menu-item-text: #ffff;
-  --color-sidebar-menu-item-hover-background: var(--color-dark-gray4);
-  --color-sidebar-menu-item-text-hover: #fff;
-  --color-sidebar-menu-item-active-background: var(--color-dark-gray4);
-  --color-sidebar-menu-item-active-text: #fff;
-  --color-sidebar-menu-item-focus-background: var(--color-dark-gray5);
+  --color-sidebar-menu-item-text: rgba(255, 255, 255, 0.75);
+  --color-sidebar-menu-item-hover-background: rgba(255, 255, 255, 0.07);
+  --color-sidebar-menu-item-text-hover: #ffffff;
+  --color-sidebar-menu-item-active-background: rgba(255, 255, 255, 0.12);
+  --color-sidebar-menu-item-active-text: #ffffff;
+  --color-sidebar-menu-item-focus-background: rgba(255, 255, 255, 0.12);
   --color-sidebar-menu-label-color: rgba(255, 255, 255, 0.4);
 
   // Sidebar overlay
@@ -569,11 +564,11 @@ body.bp4-dark  {
   --color-transaction-locking-item-enabled-border: var(--color-dark-gray5);
 
   // Reports items.
-  --color-report-section-title-text: var(--color-light-gray1);
-  --color-report-item-background: var(--color-dark-gray3);
-  --color-report-item-border: var(--color-dark-gray5);
-  --color-report-item-top-border: var(--color-dark-gray5);
-  --color-report-item-text: var(--color-light-gray2);
+  --color-report-section-title-text: #ffffff;
+  --color-report-item-background: #12120e;
+  --color-report-item-border: rgba(255, 255, 255, 0.08);
+  --color-report-item-top-border: rgba(255, 255, 255, 0.12);
+  --color-report-item-text: #a1a1aa;
 
   // Financial report drawer.
   --color-financial-report-drawer-tab-text: var(--color-light-gray3);

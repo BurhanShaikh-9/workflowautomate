@@ -8,6 +8,11 @@ body{
   }
 }
 
+body.bp4-dark,
+.bp4-dark {
+  color: #e4e4e7;
+}
+
 .#{$ns}-heading{
   font-weight: 600;
 }

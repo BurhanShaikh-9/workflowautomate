@@ -6,6 +6,7 @@
   height: 100%;
   z-index: $sidebar-zindex;
   position: relative;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
 
   .ScrollbarsCustom-Track {
     &.ScrollbarsCustom-TrackY,
@@ -147,22 +148,58 @@
       font-size: 15px;
       font-weight: 400;
 
+      .bp4-dark & {
+        border-radius: 6px;
+        margin: 2px 10px;
+        padding: 7px 12px;
+        font-size: 13.5px;
+        color: rgba(255, 255, 255, 0.65);
+        transition: all 0.15s ease-in-out;
+      }
+
       &:hover {
         background: var(--color-sidebar-menu-item-hover-background);
         color: var(--color-sidebar-menu-item-text-hover);
+
+        .bp4-dark & {
+          background: rgba(255, 255, 255, 0.07);
+          color: #ffffff;
+
+          >.#{$ns}-icon {
+            color: rgba(255, 255, 255, 0.85);
+          }
+        }
       }
       &:focus,
       &:active {
         background: var(--color-sidebar-menu-item-focus-background);
       }
-      &.bp4-active.bp4-intent-primary {
+      &.bp4-active.bp4-intent-primary,
+      &.bp4-active {
         background: var(--color-sidebar-menu-item-active-background);
         color: var(--color-sidebar-menu-item-active-text);
+
+        .bp4-dark & {
+          background: rgba(255, 255, 255, 0.12);
+          color: #ffffff;
+          font-weight: 500;
+          box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+
+          >.#{$ns}-icon {
+            color: #ffffff;
+          }
+        }
       }
       >.#{$ns}-icon {
         color: #767b9b;
         margin-right: 16px;
         margin-top: 0;
+
+        .bp4-dark & {
+          color: rgba(255, 255, 255, 0.45);
+          margin-right: 12px;
+          transition: color 0.15s ease;
+        }
       }
 
       >.#{$ns}-icon-caret-right {
@@ -180,6 +217,14 @@
         text-transform: uppercase;
         font-weight: 500;
         letter-spacing: 1px;
+
+        .bp4-dark & {
+          color: rgba(255, 255, 255, 0.38);
+          font-weight: 600;
+          letter-spacing: 0.06em;
+          padding: 12px 20px 4px;
+          margin-top: 6px;
+        }
 
         html[lang^="ar"] & {
           font-size: 12px;

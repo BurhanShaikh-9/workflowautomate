@@ -47,3 +47,25 @@
 
 .button--secondary {
 }
+
+.bp4-dark {
+  .bp4-button:not([class*='bp4-intent-']):not(.bp4-minimal) {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #f4f4f5;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.14);
+      color: #ffffff;
+    }
+  }
+
+  .bp4-button.bp4-intent-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+
+    &:hover {
+      background-color: #1d4ed8;
+    }
+  }
+}
