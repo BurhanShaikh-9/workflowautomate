@@ -33,6 +33,8 @@ services:
       - 'GOTENBERG_URL=http://bc-gotenberg:3000'
       - 'GOTENBERG_DOCS_URL=http://bc-server:3000/public/'
       - 'SIGNUP_DISABLED=${SIGNUP_DISABLED:-false}'
+      - 'SIGNUP_ALLOWED_DOMAINS=${SIGNUP_ALLOWED_DOMAINS:-}'
+      - 'SIGNUP_ALLOWED_EMAILS=${SIGNUP_ALLOWED_EMAILS:-}'
       - 'SIGNUP_EMAIL_CONFIRMATION=${SIGNUP_EMAIL_CONFIRMATION:-false}'
       - 'MAIL_HOST=${MAIL_HOST}'
       - 'MAIL_PORT=${MAIL_PORT:-587}'

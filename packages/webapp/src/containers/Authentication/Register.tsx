@@ -1,12 +1,13 @@
 import { Intent } from '@blueprintjs/core';
 import { Formik, FormikHelpers } from 'formik';
 import intl from 'react-intl-universal';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import {
   AuthFooterLinks,
   AuthFooterLink,
   AuthInsiderCard,
 } from './_components';
+import { useAuthMetaBoot } from './AuthMetaBoot';
 import { RegisterForm } from './RegisterForm';
 import {
   RegisterSchema,
@@ -30,8 +31,13 @@ const initialValues: RegisterValues = {
  * Register form.
  */
 export function RegisterUserForm() {
+  const { signupDisabled } = useAuthMetaBoot();
   const { mutateAsync: authLoginMutate } = useAuthLogin();
   const { mutateAsync: authRegisterMutate } = useAuthRegister();
+
+  if (signupDisabled) {
+    return <Redirect to={'/auth/login'} />;
+  }
 
   const handleSubmit = (
     values: RegisterValues,
